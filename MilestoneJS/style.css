@@ -43,7 +43,10 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
-
+/*TODO*/
+/* numbers that are correct load in blue*/
+/* all same number selected light up*/
+/* highlighting 3x3 grid row and column when num selected on board*/
 .number {
     width: 44px;
     height: 44px;
