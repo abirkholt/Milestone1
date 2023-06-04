@@ -7,7 +7,7 @@ hr {
     width: 500px;
 }
 
-#mistake {
+#error {
     color: red;
 
 }
@@ -56,4 +56,20 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.number-selected {
+    background-color: gray;
+}
+ /*color added to starting tiles*/
+.tile-start {
+    background-color: whitesmoke;
+}
+/* breaking up 9x9 grid with thicker borders*/
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
 }
