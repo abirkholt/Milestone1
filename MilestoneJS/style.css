@@ -1,28 +1,27 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-}
+  }
 
-hr {
+  hr {
     width: 500px;
-}
+  }
 
-#error {
+  #error {
     color: red;
+  }
 
-}
-
-#board {
+  #board {
     width: 450px;
     height: 450px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-/* tile css */
+  /* tile css */
 
-.tile {
+  .tile {
     width: 48px;
     height: 48px;
     /* grid border lightgray */
@@ -34,20 +33,20 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-#digits {
+  #digits {
     width: 450px;
     height: 50px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-}
-/*TODO*/
-/* numbers that are correct load in blue*/
-/* all same number selected light up*/
-/* highlighting 3x3 grid row and column when num selected on board*/
-.number {
+  }
+
+  /* numbers that are correct load in blue */
+  /* all same number selected light up */
+  /* highlighting 3x3 grid row and column when num selected on board */
+  .number {
     width: 44px;
     height: 44px;
     border: 1px solid black;
@@ -59,20 +58,22 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.number-selected {
+  .number-selected {
     background-color: gray;
-}
- /*color added to starting tiles*/
-.tile-start {
-    background-color: whitesmoke;
-}
-/* breaking up 9x9 grid with thicker borders*/
-.horizontal-line {
-    border-bottom: 1px solid black;
-}
+  }
 
-.vertical-line {
+  /* color added to starting tiles */
+  .tile-start {
+    background-color: whitesmoke;
+  }
+
+  /* breaking up 9x9 grid with thicker borders */
+  .horizontal-line {
+    border-bottom: 1px solid black;
+  }
+
+  .vertical-line {
     border-right: 1px solid black;
-}
+  }

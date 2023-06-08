@@ -1,26 +1,30 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0 user-calable=no">
-        <title>Sudoku</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
-    </head>
 
-    <body>
-        <h1>Sudoku</h1>
-        <!-- score / mistakes / time -->
-        <hr>
-        <!-- error for mistake counter 0/3 -->
-        <!-- id="score" increase point value per correct number inserted-->
-        <!-- id="time" timer start from game load--> 
-        <h2 id="error">0</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sudoku</title>
+    <link defer sync rel="stylesheet" href="style.css">
+    <script defer sync src="index.js"></script>
 
-        <!-- grid -->
-        <div id="board"></div>
-        <br>
-        <div id="digits">
-    </body>
+</head>
 
+<body>
+    <h1>Sudoku</h1>
+    <!-- Score / Mistakes / Time -->
+    <hr>
+    <!-- Error count for mistakes (e.g., 0/3) -->
+    <!-- Displays the current score -->
+    <!-- Displays the current time -->
+    <h2 id="error">0</h2>
+
+    <!-- Sudoku grid -->
+    <div id="board"></div>
+    <br>
+
+    <!-- Number buttons for user selection -->
+    <div id="digits"></div>
+</body>
 
 </html>
