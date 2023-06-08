@@ -125,12 +125,43 @@ function isNumberUsedInBox(row, column, number) {
   return usedNumbersInBox[Math.floor(row / 3)][Math.floor(column / 3)][number];
 }
 
+function checkWinCondtion() {
+    if (board = solution){
+        showWinPrompt();
+    }
+}
+
+function showWinPrompt() {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+
+    const promptBox = document.createElement('div');
+    promptBox.className = 'prompt-box';
+
+    const WinMessage = document.createElement('p');
+    WinMessage.textContent = 'You Win!';
+
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset';
+    resetButton.addEventListener('click', resetBoard);
+
+    promptBox.appendChild(WinMessage);
+    promptBox.appendChild(resetButton);
+    overlay.appendChild(promptBox);
+    document.body.appendChild(overlay);
+}
+
+
 //let errorCount = 0;
 
 //check lose condition
 function checkLoseCondtion() {
     if (error > 3) {
-        showLosePrompt();
+        // showLosePrompt();
+        console.log (error, " error less than 3")
+    }
+    else {
+        console.log (error, " more then 3")
     }
 }
 
@@ -159,8 +190,11 @@ function showLosePrompt() {
 
  // Reset the game board
  function resetBoard() {
-     return setGame
-    // Remove the prompt overlay
     const overlay = document.querySelector('.overlay');
     document.body.removeChild(overlay);
+     return setGame();
  }
+     // Remove the prompt overlay
+    // const overlay = document.querySelector('.overlay');
+    // document.body.removeChild(overlay);
+ 
