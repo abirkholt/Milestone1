@@ -124,3 +124,43 @@ function isNumberUsedInColumn(column, number) {
 function isNumberUsedInBox(row, column, number) {
   return usedNumbersInBox[Math.floor(row / 3)][Math.floor(column / 3)][number];
 }
+
+//let errorCount = 0;
+
+//check lose condition
+function checkLoseCondtion() {
+    if (error > 3) {
+        showLosePrompt();
+    }
+}
+
+
+//game loss window prompt
+
+function showLosePrompt() {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+
+    const promptBox = document.createElement('div');
+    promptBox.className = 'prompt-box';
+
+    const loseMessage = document.createElement('p');
+    loseMessage.textContent = 'You lose';
+
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset';
+    resetButton.addEventListener('click', resetBoard);
+
+    promptBox.appendChild(loseMessage);
+    promptBox.appendChild(resetButton);
+    overlay.appendChild(promptBox);
+    document.body.appendChild(overlay);
+}
+
+ // Reset the game board
+ function resetBoard() {
+     return setGame
+    // Remove the prompt overlay
+    const overlay = document.querySelector('.overlay');
+    document.body.removeChild(overlay);
+ }
