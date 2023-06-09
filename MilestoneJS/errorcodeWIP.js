@@ -43,6 +43,7 @@ window.onload = function () {
 function setGame() {
   createNumberButtons(); // Create number buttons for user selection
   createBoard(); // Create the Sudoku board
+  updateScore(); // Update the error count on the scoreboard
 }
 
 // Create number buttons for user selection
@@ -103,8 +104,8 @@ function selectTile() {
       this.innerText = numSelected.id; // Fill in the selected number
       updateUsedNumbers(r, c, numSelected.id); // Update used numbers in column and box
     } else {
-      error += 1;
-      document.getElementById("error").innerText = error; // Increment error count
+      errorCount += 1;
+      document.getElementById("errorCount").innerText = errorCount; // Increment error count
     }
   }
 }
@@ -152,11 +153,20 @@ function showWinPrompt() {
 }
 
 
-//let errorCount = 0;
+let errorCount = 0;
+
+function updateErrorCountDisplay() {
+    const errorCountDisplay = document.getElementById('errorCountDisplay');
+    errorCountDisplay.textContent = `Mistakes: ${errorCount}/3`;
+}
+function handleError() {
+    errorCount++;
+    updateErrorCountDisplay();
+}
 
 //check lose condition
 function checkLoseCondtion() {
-    if (error > 3) {
+    if (errorCount > 3) {
         // showLosePrompt();
         console.log (error, " error less than 3")
     }
